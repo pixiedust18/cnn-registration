@@ -4,7 +4,6 @@ import gc
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 import numpy as np
-import tensorflow as tf
 from src.VGG16 import VGG16mo
 from src.utils.utils import *
 import cv2
@@ -30,7 +29,7 @@ class CNN(object):
         self.beta = 2.0
         self.lambd = 0.5
 
-        self.cnnph = tf.keras.Input([2, 224, 224, 3], dtype=tf.dtypes.float32)
+        self.cnnph = tf.compat.v1.placeholder("float", [2, 224, 224, 3])
         self.vgg = VGG16mo()
         self.vgg.build(self.cnnph)
         self.SC = ShapeContext()
