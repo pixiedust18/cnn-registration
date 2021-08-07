@@ -102,8 +102,7 @@ class ShapeContext(object):
             d = qlength
         C = zeros((p, p2))
         for i in range(p):
-            for j in 
-            range(p2):
+            for j in range(p2):
                 C[i, j] = self._cost(Q[j] / d, P[i] / p)
 
         return C
