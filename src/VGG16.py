@@ -3,7 +3,7 @@ import os
 
 import numpy as np
 import tensorflow as tf
-from utils.utils import gaussian_kernel
+from src.utils.utils import gaussian_kernel
 
 VGG_MEAN = [103.939, 116.779, 123.68]
 
