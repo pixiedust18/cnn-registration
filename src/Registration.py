@@ -30,7 +30,7 @@ class CNN(object):
         self.beta = 2.0
         self.lambd = 0.5
 
-        self.cnnph = tf.Variable(tf.ones(shape=(2, 224, 224, 3)))
+        self.cnnph = tf.placeholder("float", [2, 224, 224, 3]))
         self.vgg = VGG16mo()
         self.vgg.build(self.cnnph)
         self.SC = ShapeContext()
